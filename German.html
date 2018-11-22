@@ -16,12 +16,19 @@
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="js/lightbox.min.js"></script>  
     <script src="js/snow.js"></script>
+    <script src="js/board.js"></script>
     <link href="css/lightbox.css" rel="stylesheet" />
     <script language="javascript" type="text/javascript">
-      //JAVA SCRIPT CODE HERE
+function c(){
+var space = 1;
+for (var r=0; r<10; r++) {
+  var col = "";
+  for (var c=0; c<10; c++) { col += "<td data-pos='"+space+"'></td>"; space++; }
+  $("#battleboard").append("<tr>"+col+"</tr>");
+}}
     </script>
   </head>  
-  <body>    
+  <body onload="createBoard();">    
     
     <div id="pagina">
       <div id="menu">           
@@ -59,11 +66,41 @@
               </h2>
             </div>
             <div id="left_panelSPLIT" class="row">
-              
+              <div id="left_1" class="column2">
+                <div id="tanknames">
+                  <h2 id="name1">
+                    Karl Thor
+                  </h2>
+                  <h2 class="tnames">
+                    JagdTiger
+                  </h2>
+                  <h2 class="tnames">
+                    Tiger I
+                    </h2>
+                  <h2 class="tnames">
+                    Panther V
+                  </h2>
+                  <h2 class="tnames">
+                    Wiberlwind IV
+                  </h2>
+                </div>
+              </div>
+              <div id="left_2" class="column2">
+                <div id="images">
+                  <img id="image1" src="photos/1.png" />
+                  <img class="imagesf" src="photos/1.png" />
+                  <img class="imagesf" src="photos/1.png" />
+                  <img class="imagesf" src="photos/1.png" />
+                  <img class="imagesf" src="photos/1.png" />
+                </div>
+              </div>
             </div>
            </div>
            <div id="right_panel" class="column">
-             
+             <script language="javascript" type="text/javascript">
+       
+              </script>
+              <table id="battleboard"></table>
             </div>
         </div>
      
