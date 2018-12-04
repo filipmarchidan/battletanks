@@ -17,6 +17,7 @@
     <script src="js/lightbox.min.js"></script>  
     <script src="js/snow.js"></script>
     <script src="js/board.js"></script>
+    <script type="text/javascript" src="js/interactions.js" ></script>
     <link href="css/lightbox.css" rel="stylesheet" />
     <script language="javascript" type="text/javascript">
 function c(){
@@ -29,7 +30,7 @@ for (var r=0; r<10; r++) {
     </script>
   </head>  
   <body onload="createBoard();">    
-    
+
     <div id="pagina">
       <div id="menu">           
         <!-- Deschidere div meniu -->         
@@ -86,25 +87,25 @@ for (var r=0; r<10; r++) {
                 </div>
               </div>
               <div id="left_2" class="column2">
-                <div id="images">
+                 
+                <div id="images" onload="interaction();">
                   <img id="image1" src="photos/1.png" />
-                  <img class="imagesf" src="photos/1.png" />
+                  <img class="imagesf" id="at" src="photos/alphatank.png"/>
                   <img class="imagesf" src="photos/1.png" />
                   <img class="imagesf" src="photos/1.png" />
                   <img class="imagesf" src="photos/1.png" />
                 </div>
+              
               </div>
             </div>
            </div>
            <div id="right_panel" class="column">
-             <script language="javascript" type="text/javascript">
-       
-              </script>
+            
               <table id="battleboard"></table>
             </div>
         </div>
      
     </div>         
-    <!-- Inchidere div pagina -->   
+    <!-- Inchidere div pagina --> 
   </body>
 </html>
