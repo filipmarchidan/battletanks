@@ -206,14 +206,15 @@ LEFT
     border-collapse: collapse;
     color: black;
     margin-left: 80px;
-
+    background: url("../photos/texture.png");
 }
 
 #battleboard td
 {
     width: 25px;
     height: 25px;
-    border: 1px solid black;
-    border-color: black;
+    border: 1px solid rgb(255, 255, 255);
+    border-color: white;
     padding: 0px 0px;
+
 }
