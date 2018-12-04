@@ -29,6 +29,6 @@ server.on('error', (err) => {
   console.error('Server error:', err);
 });
 
-server.listen(5500, () => {
-  console.log('filip says fuck you on 5500');
+server.listen(3000, () => {
+  console.log('filip says fuck you on 3000');
 });
