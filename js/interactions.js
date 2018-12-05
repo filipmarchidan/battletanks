@@ -1,1 +1,1 @@
-$(".imagesf").draggable({containment:"#big_panel", grid:[60,45]});
+$(".imagesf").draggable({containment:"#battleboard", grid:[15,18]});
