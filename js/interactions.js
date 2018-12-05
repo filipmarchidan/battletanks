@@ -1,0 +1,1 @@
+$(".imagesf").draggable({containment:"#big_panel", grid:[60,45]});

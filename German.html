@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+git<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">  
   <head>    
   <!-- iaca commul de fitze-->
@@ -17,6 +17,8 @@
     <script src="js/lightbox.min.js"></script>  
     <script src="js/snow.js"></script>
     <script src="js/board.js"></script>
+    <script src="js/jquery/jquery-ui.min.js"></script>
+    <script src="js/jquery/jquery-ui.js"></script>
     <link href="css/lightbox.css" rel="stylesheet" />
     <script language="javascript" type="text/javascript">
     <!-- sa se salveze gitul -->
@@ -30,7 +32,7 @@ for (var r=0; r<10; r++) {
     </script>
   </head>  
   <body onload="createBoard();">    
-    
+
     <div id="pagina">
       <div id="menu">           
         <!-- Deschidere div meniu -->         
@@ -87,25 +89,26 @@ for (var r=0; r<10; r++) {
                 </div>
               </div>
               <div id="left_2" class="column2">
-                <div id="images">
+                 
+                <div id="images" onload="interaction();">
                   <img id="image1" src="photos/1.png" />
-                  <img class="imagesf" src="photos/1.png" />
+                  <img class="imagesf" id="at" src="photos/alphatank.png"/>
                   <img class="imagesf" src="photos/1.png" />
                   <img class="imagesf" src="photos/1.png" />
                   <img class="imagesf" src="photos/1.png" />
                 </div>
+              
               </div>
             </div>
            </div>
            <div id="right_panel" class="column">
-             <script language="javascript" type="text/javascript">
-       
-              </script>
+            
               <table id="battleboard"></table>
             </div>
         </div>
      
     </div>         
-    <!-- Inchidere div pagina -->   
+    <!-- Inchidere div pagina --> 
+    <script src="js/interactions.js" ></script>
   </body>
 </html>
