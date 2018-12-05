@@ -29,6 +29,7 @@ server.on('error', (err) => {
   console.error('Server error:', err);
 });
 
-server.listen(3000, () => {
-  console.log('filip says fuck you on 3000');
+server.listen(80,'0.0.0.0', () => {
+  console.log('filip says fuck you on default port');
+  console.log('^_^');
 });

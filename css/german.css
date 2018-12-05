@@ -67,9 +67,6 @@ LEFT
      font-size:20px;
      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
   }
-  canvas {
-	
-}
 #big_panel
 {
     width: 100%;
@@ -152,6 +149,7 @@ LEFT
 {
     text-align: left;
     width:40%;
+    height:500px;
     float:left;
     border-right: 1px solid black;  
 }
@@ -179,23 +177,22 @@ LEFT
 .imagesf
 {
     text-align: left;
-    width: 100%;
+    width: 180px;
+    height: 100px;
     float:left;
-    margin: 40px 0px 0px 10px;
+    margin: 50px 0px 0px 10px;
 }
-#at
+#coord
 {
-    width: 100px;
-    height: 25px;
-    user-select: none;
-    -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
-
+    color: black;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    float :center;
 }
 #image1
 {
     text-align: left;
-    width: 100%;
+   
     float:left;
     margin: 70px 0px 0px 10px;
 }
@@ -206,19 +203,42 @@ LEFT
     float: center;
     margin: 90px 10px 0px 0px;
 }
+#images
+{
+    width: 100px;
+}
 #battleboard
 {
-    width: 100%;
-    height: 100%;
+    width: 500px;
+    height: 500px;
     border: 2px solid black;
     margin: 0px;
     border-collapse: collapse;
     color: black;
-    margin-left: 80px;
     background: url("../photos/texture.png");
 }
 
 #battleboard td
+{
+    width: 25px;
+    height: 25px;
+    border: 1px solid rgb(255, 255, 255);
+    border-color: white;
+    padding: 0px 0px;
+
+}
+#battlegrid
+{
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+    margin: 0px;
+    border-collapse: collapse;
+    color: black;
+    background: url("../photos/texture.png");
+}
+
+#battlegrid td
 {
     width: 25px;
     height: 25px;

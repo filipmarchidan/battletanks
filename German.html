@@ -15,20 +15,13 @@ git<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3
     <link type="text/css" rel="stylesheet" href="css/german.css" />    
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="js/lightbox.min.js"></script>  
-    <script src="js/snow.js"></script>
+    <script src="js/rotate.js"></script>
     <script src="js/board.js"></script>
     <script src="js/jquery/jquery-ui.min.js"></script>
-    <script src="js/jquery/jquery-ui.js"></script>
+    <script src="js/jquery/jquery-ui.js"></script>\
+    <script src="js/grid/src/utils.js"></script>
     <link href="css/lightbox.css" rel="stylesheet" />
     <script language="javascript" type="text/javascript">
-    <!-- sa se salveze gitul -->
-function c(){
-var space = 1;
-for (var r=0; r<10; r++) {
-  var col = "";
-  for (var c=0; c<10; c++) { col += "<td data-pos='"+space+"'></td>"; space++; }
-  $("#battleboard").append("<tr>"+col+"</tr>");
-}}
     </script>
   </head>  
   <body onload="createBoard();">    
@@ -90,25 +83,27 @@ for (var r=0; r<10; r++) {
               </div>
               <div id="left_2" class="column2">
                  
-                <div id="images" onload="interaction();">
-                  <img id="image1" src="photos/1.png" />
-                  <img class="imagesf" id="at" src="photos/alphatank.png"/>
-                  <img class="imagesf" src="photos/1.png" />
-                  <img class="imagesf" src="photos/1.png" />
-                  <img class="imagesf" src="photos/1.png" />
+                <div id="images">
+                  <img id="image1" class="imagesf" src="photos/gtank_x.png" />
+                  <img class="imagesf" id="at" src="photos/gtank_x.png"/>
+                  <img class="imagesf" src="photos/gtank_x.png" />
+                  <img class="imagesf" src="photos/gtank_x.png" />
+                  <img class="imagesf" src="photos/gtank_x.png" />
                 </div>
               
               </div>
             </div>
            </div>
            <div id="right_panel" class="column">
-            
-              <table id="battleboard"></table>
+              <p id="coord">coordinates</p>
+              <table id="battleboard" onmousemove="findObjectCoords();"></table>
+              
             </div>
         </div>
      
     </div>         
     <!-- Inchidere div pagina --> 
     <script src="js/interactions.js" ></script>
+
   </body>
 </html>
