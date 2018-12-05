@@ -185,8 +185,8 @@ LEFT
 }
 #at
 {
-    width: 180px;
-    height: 60px;
+    width: 100px;
+    height: 25px;
     user-select: none;
     -webkit-transform: translate(0px, 0px);
             transform: translate(0px, 0px);
