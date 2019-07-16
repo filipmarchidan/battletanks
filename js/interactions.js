@@ -3,10 +3,12 @@ $(function () {
     {
         appendTo: "body",
         cursor: "move",
-        revert: "invalid"
+        revert: "invalid",
+        grid: [50,50],
+        containment: "#board_grid"
     });
 
-    initDroppable($("#battleboard"));
+    initDroppable($("#board_grid"));
     function initDroppable($elements) {
         $elements.droppable({
             activeClass: "ui-state-default",
@@ -18,6 +20,8 @@ $(function () {
                     .find( "#battlecells" )
                         .html( "Dropped!" );
             }
+        });
+    }
             // over: function (event, ui) {
             //     var $this = $(this);
             // }
@@ -26,7 +30,6 @@ $(function () {
             //     $("").text(ui.draggable.text()).appendTo(this);
             //     $("#").find(":contains('" + ui.draggable.text() + "')")[0].remove();
             // }
-        });
-    }
+
    
 });

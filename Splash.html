@@ -1,9 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">  
+<!DOCTYPE html >
+<html lang="en">  
   <head>    
-  <!-- iaca commul de fitze-->
     <title>Tank battle ship    
     </title>    
+    <link rel="shortcut icon" href="photos/logo.png" type="image/png">
     <meta http-equiv="Content-Type"      content="text/html; charset=iso-8859-1" />    
     <meta http-egit quiv="content-language"  content="en" />    
     <meta http-equiv="pragma"            content="no-cache" />    
@@ -16,11 +16,13 @@
     <script src="js/jquery-1.11.0.min.js"></script>
 	  <script src="js/lightbox.min.js"></script>  
     <link href="css/lightbox.css" rel="stylesheet" />
+    <script src="js/socket.js"></script>
+    <srcipt src="server.js"></srcipt>
+
     <script language="javascript" type="text/javascript">
       //JAVA SCRIPT CODE HERE
     </script>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="client/client.js"></script>
+    
   </head>  
   <body>    
     <div id="pagina">
@@ -28,24 +30,21 @@
         <!-- Inchidere div buton_stanga -->         
         <div id="left_button">          
           <ul>
-            <li>
-              <img src="photos/logo.png">
+              <li id="logo">
+                  <img src="photos/logo.png" width="20" height="20">
+                </li>               
+            <li>            
+              <a href="Splash.html" class="animateLink">Home</a>            
             </li>              
             <li>            
-              <a href="Splash.html">Home</a>            
-            </li>              
-            <li>            
-              <a href="About.html">About</a>            
-            </li>              
-            <li>
-              <a href="Rules.html">Rules</a>
-            </li>                                  
+              <a href="About.html" class="animateLink">About and Rules</a>            
+            </li>                                           
           </ul>        
         </div>              
         <!-- Inchidere div buton_dreapta -->       
       </div>
       <div id="before_heading">
-        <h2>Battle Tanks</h2>
+        <h2 id="ut">Battle Tanks</h2>
       </div>
       <div id="before_heading2">
         <h2>Epic Strategy Battle</h2>
@@ -71,8 +70,10 @@
           </form>
         </div>
         <div id="right_panel" class="column">
+          <span id="say"></span>
+          
           <div id="message1">
-            <h3 class="text2"> Games played</h3>
+            <h3 class="text2" id=""> Users online: <h3 class="text2"id="connections">0</h3></h3>
           </div>
           <div id="message2">
             <h3 class="text2"> Games ongoing</h3>
@@ -80,6 +81,8 @@
         </div>
       </div>
     </div>          
-    <!-- Inchidere div pagina -->   
+    <!-- Inchidere div pagina --> 
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client/client_main.js"></script>  
   </body>
 </html>
